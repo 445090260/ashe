@@ -8,6 +8,6 @@ import org.springframework.context.annotation.Configuration;
 public class ReceiveConf {
     @Bean
     public Queue queue() {
-        return new Queue("hello");
+        return new Queue("Order");
     }
 }
