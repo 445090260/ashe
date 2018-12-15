@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="no-js">    
+    <head>
+        <title>简洁响应式Bootstrap后台主题模板BootAdmin</title>
+        <!-- Bootstrap -->
+        <link href="/css/Admin/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="/css/Admin/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="/css/Admin/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
+        <link href="/css/Admin/styles.css" rel="stylesheet" media="screen">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="/js/Admin/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+		<script src="/js/Admin/after.js"></script>
+    </head>
+    
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">BootAdmin</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right">
+                            <li class="dropdown">
+                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i>管理员<i class="caret"></i>
+
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a tabindex="-1" href="#">个人资料</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a tabindex="-1" href="login.html">退出</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav">
+						
+                            <li>
+                                <a href="#">首页</a>
+                            </li>
+							<li class="dropdown">
+                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">内容 <i class="caret"></i>
+
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a tabindex="-1" href="#">新闻公告</a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#">帮助内容</a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#">弹窗公告</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a tabindex="-1" href="#">答疑</a>
+                                    </li>
+                                </ul>
+                            </li>
+							
+							<li class="dropdown">
+                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">账户 <i class="caret"></i>
+
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a tabindex="-1" href="#">用户列表</a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#">添加用户</a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#">实名认证</a>
+                                    </li>
+									<li>
+                                        <a tabindex="-1" href="#">推广数据</a>
+                                    </li>
+                                </ul>
+                            </li>
+							<li class="dropdown">
+                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">资金 <i class="caret"></i>
+
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a tabindex="-1" href="#">钱包概览</a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#">转账记录</a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#">余额增减</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">设置 <b class="caret"></b>
+
+                                </a>
+                                <ul class="dropdown-menu" id="menu1">
+                                    <li>
+                                        <a href="#">工具 <i class="icon-arrow-right"></i>
+
+                                        </a>
+                                        <ul class="dropdown-menu sub-menu">
+                                            <li>
+                                                <a href="#">报表</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">日志</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">错误</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">SEO设置</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">其他链接</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#">其他链接</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">其他链接</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span2" id="sidebar">
+                    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
+                        <li th:class="${path=='index'}? 'active' : ''">
+                            <a href="/Admin/index"><i class="icon-chevron-right"></i> 首页</a>
+                        </li>
+						
+						<li th:class="${path=='content'}? 'active' : ''">
+                            <a href="/Admin/content"><i class="icon-chevron-right"></i> 内容</a>
+                        </li>
+						<li th:class="${path=='account'}? 'active' : ''">
+                            <a href="account"><i class="icon-chevron-right"></i> 账户</a>
+                        </li>
+						<li th:class="${path=='capital'}? 'active' : ''">
+                            <a href="capital"><i class="icon-chevron-right"></i> 资金</a>
+                        </li>
+						<li th:class="${path=='news'}? 'active' : ''">
+                            <a href="news"><i class="icon-chevron-right"></i> 消息</a>
+                        </li>
+						<li th:class="${path=='presentation'}? 'active' : ''">
+                            <a href="presentation"><i class="icon-chevron-right"></i> 报告</a>
+                        </li>
+						<li th:class="${path=='error'}? 'active' : ''">
+                            <a href="error"><i class="icon-chevron-right"></i> 错误</a>
+                        </li>
+						<li th:class="${path=='log'}? 'active' : ''">
+                            <a href="log"><i class="icon-chevron-right"></i> 日志</a>
+                        </li>
+						<li th:class="${path=='setting'}? 'active' : ''">
+                            <a href="setting"><i class="icon-chevron-right"></i> 设置</a>
+                        </li>
+
+		
+                    </ul>
+                </div>
+                
+                <!--/span-->
+                <div class="span10" id="content" style="margin-top: 0.8%;">
+                    
+                   
+                    <div class="row-fluid">
+                        
+                            <!-- block -->
+                            <div class="block">
+                                <div class="navbar navbar-inner block-header">
+                                    <div class="muted pull-left">用户</div>
+                                    <div class="pull-right"><span class="badge badge-info" th:text="${usernum}">1,234</span>
+
+                                    </div>
+                                </div>
+                                <div class="block-content collapse in">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>用户名</th>
+                                                <th>密码</th>
+                                                <th>手机号</th>
+												<th>邮箱</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+											<tr  th:each="user,userStat : ${list}">  
+											<td th:text="${user.userId}">Onions</td>  
+											<td th:text="${user.userUserName}">test@test.com.cn</td>  
+											<td th:text="${user.userPhone}">yes</td> 
+											<td th:text="${user.userEmail}">test@test.com.cn</td>  
+											<td th:text="${user.userPassword}">yes</td> 
+											<!-- <th th:text="${userStat.index}">状态变量：index</th>  
+											<th th:text="${userStat.count}">状态变量：count</th>  
+											<th th:text="${userStat.size}">状态变量：size</th>  
+											<th th:text="${userStat.current.userName}">状态变量：current</th>  
+											<th th:text="${userStat.even}">状态变量：even****</th>  
+											<th th:text="${userStat.odd}">状态变量：odd</th>  
+											<th th:text="${userStat.first}">状态变量：first</th>  
+											<th th:text="${userStat.last}">状态变量：last</th>   -->
+										    </tr>  
+                                            <!-- <tr>
+                                                <td>1</td>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Vincent</td>
+                                                <td>Gabriel</td>
+                                                <td>@gabrielva</td>
+                                            </tr> -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /block -->
+                        
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <hr>
+            <footer>
+                <p>Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://www.sucaihuo.com/">网站模板</a></p>
+            </footer>
+        </div>
+        <!--/.fluid-container-->
+        <script src="/js/Admin/jquery-1.9.1.min.js"></script>
+        <script src="/js/Admin/bootstrap.min.js"></script>
+        <script src="/js/Admin/jquery.easy-pie-chart.js"></script>
+        <script src="/js/Admin/scripts.js"></script>
+        <script>
+        $(function() {
+            // Easy pie charts
+            $('.chart').easyPieChart({animate: 1000});
+        });
+        </script>
+    </body>
+
+</html>
