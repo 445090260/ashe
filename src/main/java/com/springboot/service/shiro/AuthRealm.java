@@ -36,7 +36,7 @@ public class AuthRealm extends AuthorizingRealm {
         UsernamePasswordToken userToken=(UsernamePasswordToken)authenticationToken;
         String username =userToken.getUsername();
         ByteSource credentialsSalt = ByteSource.Util.bytes(username);
-        Object credentials=userBaseMapper.selectUserBaseByUserName(username);
+        Object credentials=userBaseMapper.selectUserBaseByUserName(username).getPassword();
         return new SimpleAuthenticationInfo(username,credentials,credentialsSalt,this.getName());
     }
     //授权
