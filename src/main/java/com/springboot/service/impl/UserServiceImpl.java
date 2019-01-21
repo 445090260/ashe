@@ -27,13 +27,13 @@ public class UserServiceImpl implements IUserService {
         }
         catch (AuthenticationException e){
             return ServerResponse.createByErrorMessage("用户名/密码错误");
-        }catch (Exception e){
-            ServerResponse.createByErrorMessage("服务器错误，请稍后在试");
+}catch (Exception e){
+        ServerResponse.createByErrorMessage("服务器错误，请稍后在试");
         }
         UserBase userBase=userBaseMapper.selectUserBaseByUserName(username);
         userBase.setPassword(StringUtils.EMPTY);
         return ServerResponse.createBySuccessMsgAndData("登陆成功",userBase);
-    }
+        }
     /**
      *  用户注册
      * @param userBase

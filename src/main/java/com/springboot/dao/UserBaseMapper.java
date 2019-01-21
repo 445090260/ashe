@@ -19,6 +19,6 @@ public interface UserBaseMapper {
     public int checkEmail(String email);
     @Select("select count(1) from user_base where phone = #{phone}")
     public int checkPhone(String phone);
-    @Insert("insert into user_base(username,phone,email,password), values (#{username},#{phone},#{email},#{password})")
+    @Insert("insert into user_base(username,phone,email,password) values (#{username},#{phone},#{email},#{password})")
     public int insertUserBase(UserBase userBase);
 }
