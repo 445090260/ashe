@@ -3,7 +3,7 @@ package com.springboot.domain;
 public class UserBase {
     private Integer userId;
 
-    private String name;
+    private String username;
 
     private String phone;
 
@@ -21,12 +21,12 @@ public class UserBase {
         this.userId = userId;
     }
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setUserName(String username) {
+        this.username = username == null ? null : username.trim();
     }
 
     public String getPhone() {
