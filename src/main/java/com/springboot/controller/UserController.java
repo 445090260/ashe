@@ -25,6 +25,7 @@ public class UserController {
      */
     @GetMapping("/login")
     public ServerResponse<UserBase> login(String username, String password ){
+        System.out.println(1);
         ServerResponse<UserBase> userServerResponse = iUserService.login(username,password);
         if(userServerResponse.isSuccess()){
             Session session= SecurityUtils.getSubject().getSession();
@@ -41,4 +42,5 @@ public class UserController {
     public ServerResponse<String> register(UserBase userBase){
         return iUserService.register(userBase);
     }
+
 }
